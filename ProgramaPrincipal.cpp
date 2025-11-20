@@ -18,6 +18,9 @@ struct Mascota {
     char sexo[10];    // Ej: macho, hembra
     int edad;         // En años
 };
+struct consulta{
+    char motivo[100];
+};
 struct HistorialClinico {
     int idHistorial;  // ID único del historial
     int idMascota;    // Relación con mascota
@@ -27,6 +30,22 @@ struct HistorialClinico {
     char tratamiento[100];
     char veterinario[30];
 };
+struct Tratamiento {
+    int idTratamiento;
+    char nombre[30];
+    char descripcion[100];
+    float costo;
+};
+struct RegistroVeterinaria {
+    Mascota mascota;
+    HistorialClinico historial;
+};
+/*Dueno = datos de la persona responsable.
+Mascota = los datos básicos del animal.
+Consulta = cada visita/chequeo.
+Tratamiento = medicinas o procesos que recibe.
+HistorialClinico = junta consultas + tratamientos.
+RegistroVeterinaria = une mascota + historial en un solo registro*/
 
 int main(){
     
