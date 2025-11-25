@@ -122,7 +122,7 @@ void EncontrarInfDuenio(string NombreArchivo)
                 cout << "\tTelefono: " << DatosDuenio.telefono << endl;
                 cout << "\tEmail: " << DatosDuenio.email << endl;
 
-                encontrado = true;   // 👉 ahora sí está dentro del if correcto
+                encontrado = true;   // Está dentro del if correcto
             }
         }
 
@@ -296,6 +296,7 @@ void MenuOpciones(string nombreArchivo)
     } while (opcion != 0);
     system("cls");
 }
+
 
 
 
