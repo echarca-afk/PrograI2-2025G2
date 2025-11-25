@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include "libEmiliano.h"
+#include "MenuPrincipal.h"
 using namespace std;
 struct Duenio{
     int idDuenio;  
@@ -50,7 +50,7 @@ struct facturacion{
     char beneficiario[100];
     char fecha_facturacion[11];
 };
-/*Dueno = datos de la persona responsable
+/*Duenio = datos de la persona responsable
 Mascota = los datos básicos del animal
 Consulta = cada visita/chequeo
 Tratamiento = medicinas o procesos que recibe
@@ -58,7 +58,6 @@ HistorialClinico = junta consultas + tratamientos
 RegistroVeterinaria = une mascota + historial en un solo registro*/
 int main(){
     string RegistroTXT = "RegistroVeterinaria.txt";
+    mostrarMenu(RegistroTXT);
     return 0;
 }
-
-
