@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include "MenuPrincipal.h"
+
 using namespace std;
 struct Duenio{
     int idDuenio;  
@@ -18,21 +19,18 @@ struct Mascota{
     char sexo[10]; 
     int edad;      
 };
-
 struct consulta{
     int idConsulta;
     int idMascota;
     char fecha_consulta[11];
     char motivo[100];
 };
-
 struct Tratamiento {
     int idTratamiento;
     char nombre[30];
     char descripcion[100];
     float costo;
 };
-
 struct HistorialClinico{
     int idHistorial; 
     int idMascota;  
@@ -42,7 +40,6 @@ struct HistorialClinico{
     char veterinario[30];
     int idTratamiento;
 };
-
 struct facturacion{
     int idTratamiento;
     float costo;
@@ -50,14 +47,14 @@ struct facturacion{
     char beneficiario[100];
     char fecha_facturacion[11];
 };
+int main(){
+    string RegistroTXT = "RegistroVeterinaria.txt";
+    mostrarMenu(RegistroTXT);
+    return 0;
+}
 /*Duenio = datos de la persona responsable
 Mascota = los datos básicos del animal
 Consulta = cada visita/chequeo
 Tratamiento = medicinas o procesos que recibe
 HistorialClinico = junta consultas + tratamientos
 RegistroVeterinaria = une mascota + historial en un solo registro*/
-int main(){
-    string RegistroTXT = "RegistroVeterinaria.txt";
-    mostrarMenu(RegistroTXT);
-    return 0;
-}
