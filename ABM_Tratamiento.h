@@ -36,13 +36,27 @@ void MenuTratamientos(string archivoBin) {
         cout << "Seleccione una opcion: ";
         cin >> opcion;
         switch(opcion) {
-            case 1: IngresarTratamiento(archivoBin); break;
-            case 2: MostrarTratamientos(archivoBin); break;
-            case 3: EncontrarTratamiento(archivoBin); break;
-            case 4: ModificarTratamiento(archivoBin); break;
-            case 5: EliminarTratamiento(archivoBin); break;
-            case 0: cout << "Saliendo...\n"; break;
-            default: cout << "Opcion invalida.\n"; system("pause");
+            case 1: 
+                IngresarTratamiento(archivoBin); 
+                break;
+            case 2: 
+                MostrarTratamientos(archivoBin); 
+                break;
+            case 3: 
+                EncontrarTratamiento(archivoBin); 
+                break;
+            case 4: 
+                ModificarTratamiento(archivoBin); 
+                break;
+            case 5: 
+                EliminarTratamiento(archivoBin); 
+                break;
+            case 0: 
+                cout << "Saliendo...\n"; 
+                break;
+            default: 
+                cout << "Opcion invalida.\n"; 
+                system("pause");
         }
     } while(opcion != 0);
 }

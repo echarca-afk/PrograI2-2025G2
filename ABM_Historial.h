@@ -42,13 +42,27 @@ void MenuHistorial(string archivoBin) {
         cout << "Seleccione una opcion: ";
         cin >> opcion;
         switch(opcion) {
-            case 1: IngresarHistorial(archivoBin); break;
-            case 2: MostrarHistoriales(archivoBin); break;
-            case 3: EncontrarHistorial(archivoBin); break;
-            case 4: ModificarHistorial(archivoBin); break;
-            case 5: EliminarHistorial(archivoBin); break;
-            case 0: cout << "Saliendo...\n"; break;
-            default: cout << "Opcion invalida.\n"; system("pause");
+            case 1: 
+                IngresarHistorial(archivoBin); 
+                break;
+            case 2: 
+                MostrarHistoriales(archivoBin); 
+                break;
+            case 3: 
+                EncontrarHistorial(archivoBin); 
+                break;
+            case 4: 
+                ModificarHistorial(archivoBin); 
+                break;
+            case 5: 
+                EliminarHistorial(archivoBin); 
+                break;
+            case 0: 
+                cout << "Saliendo...\n"; 
+                break;
+            default: 
+                cout << "Opcion invalida.\n"; 
+                system("pause");
         }
     } while(opcion != 0);
 }

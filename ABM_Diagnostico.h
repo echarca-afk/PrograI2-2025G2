@@ -13,7 +13,7 @@ struct Diagnostico {
     int idMascota;           // Relación con la mascota
     fecha fechaDiagnostico;  // Fecha estructurada
     char diagnostico[300];   // Texto del diagnóstico
-    bool eliminado;          // Baja lógica
+    bool eliminado;          
 };
 void MenuDiagnosticos(string archivoBin);
 void IngresarDiagnostico(string archivoBin);
@@ -41,13 +41,27 @@ void MenuDiagnosticos(string archivoBin) {
         cout << "Seleccione una opcion: ";
         cin >> opcion;
         switch(opcion) {
-            case 1: IngresarDiagnostico(archivoBin); break;
-            case 2: MostrarDiagnosticos(archivoBin); break;
-            case 3: EncontrarDiagnostico(archivoBin); break;
-            case 4: ModificarDiagnostico(archivoBin); break;
-            case 5: EliminarDiagnostico(archivoBin); break;
-            case 0: cout << "Saliendo...\n"; break;
-            default: cout << "Opcion invalida.\n"; system("pause");
+            case 1: 
+                IngresarDiagnostico(archivoBin);
+                break;
+            case 2: 
+                MostrarDiagnosticos(archivoBin); 
+                break;
+            case 3: 
+                EncontrarDiagnostico(archivoBin); 
+                break;
+            case 4: 
+                ModificarDiagnostico(archivoBin); 
+                break;
+            case 5: 
+                EliminarDiagnostico(archivoBin);
+                break;
+            case 0: 
+                cout << "Saliendo...\n"; 
+                break;
+            default: 
+                cout << "Opcion invalida.\n"; 
+                system("pause");
         }
     } while(opcion != 0);
 }

@@ -37,13 +37,25 @@ void Menu(string archivoNombre) {
         cin >> opcion;
 
         switch (opcion) {
-            case 1: AgregarMascota(archivoNombre); break;
-            case 2: ListarMascotas(archivoNombre); break;
-            case 3: BuscarMascota(archivoNombre); break;
-            case 4: ModificarMascota(archivoNombre); break;
-            case 5: EliminarMascota(archivoNombre); break;
-            case 0: break;
-            default: cout << "Opción inválida.\n"; system("pause");
+            case 1: 
+                AgregarMascota(archivoNombre); 
+                break;
+            case 2: 
+                ListarMascotas(archivoNombre); 
+                break;
+            case 3: 
+                BuscarMascota(archivoNombre); 
+                break;
+            case 4: 
+                ModificarMascota(archivoNombre); 
+                break;
+            case 5: 
+                EliminarMascota(archivoNombre); 
+                break;
+            case 0: 
+                break;
+            default: 
+                cout << "Opción inválida.\n"; system("pause");
         }
     } while (opcion != 0);
 }
@@ -63,11 +75,16 @@ void AgregarMascota(string archivoNombre) {
     cin >> m.idDuenio;
     cin.ignore();
 
-    cout << "Nombre: "; cin.getline(m.nombre, 30);
-    cout << "Especie: "; cin.getline(m.especie, 20);
-    cout << "Raza: "; cin.getline(m.raza, 30);
-    cout << "Sexo: "; cin.getline(m.sexo, 10);
-    cout << "Edad: "; cin >> m.edad;
+    cout << "Nombre: "; 
+    cin.getline(m.nombre, 30);
+    cout << "Especie: "; 
+    cin.getline(m.especie, 20);
+    cout << "Raza: "; 
+    cin.getline(m.raza, 30);
+    cout << "Sexo: "; 
+    cin.getline(m.sexo, 10);
+    cout << "Edad: "; 
+    cin >> m.edad;
     m.eliminado = false;
     archivo.write((char*)&m, sizeof(Mascota));
     archivo.close();

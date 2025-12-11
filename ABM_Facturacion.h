@@ -17,7 +17,7 @@ struct Factura {
     char beneficiario[100];     // Nombre del beneficiario
     fecha fechaFactura;         // Fecha estructurada
     char formaPago[30];         // Efectivo, tarjeta, transferencia
-    bool eliminado;             // Baja lógica
+    bool eliminado;             
 };
 
 void MenuFacturacion(string archivoBin);
@@ -45,13 +45,27 @@ void MenuFacturacion(string archivoBin) {
         cout << "Seleccione una opcion: ";
         cin >> opcion;
         switch(opcion) {
-            case 1: IngresarFactura(archivoBin); break;
-            case 2: MostrarFacturas(archivoBin); break;
-            case 3: BuscarFactura(archivoBin); break;
-            case 4: ModificarFactura(archivoBin); break;
-            case 5: EliminarFactura(archivoBin); break;
-            case 0: cout << "Saliendo...\n"; break;
-            default: cout << "Opcion invalida.\n"; system("pause");
+            case 1: 
+                IngresarFactura(archivoBin); 
+                break;
+            case 2: 
+                MostrarFacturas(archivoBin); 
+                break;
+            case 3: 
+                BuscarFactura(archivoBin); 
+                break;
+            case 4: 
+                ModificarFactura(archivoBin); 
+                break;
+            case 5: 
+                EliminarFactura(archivoBin); 
+                break;
+            case 0: 
+                cout << "Saliendo...\n"; 
+                break;
+            default: 
+                cout << "Opcion invalida.\n"; 
+                system("pause");
         }
     } while(opcion != 0);
 }

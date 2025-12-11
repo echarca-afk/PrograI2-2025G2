@@ -39,13 +39,27 @@ void MenuConsultas(string archivoBin) {
         cout << "Seleccione una opcion: ";
         cin >> opcion;
         switch(opcion) {
-            case 1: IngresarConsulta(archivoBin); break;
-            case 2: MostrarConsultas(archivoBin); break;
-            case 3: EncontrarConsulta(archivoBin); break;
-            case 4: ModificarConsulta(archivoBin); break;
-            case 5: EliminarConsulta(archivoBin); break;
-            case 0: cout << "Saliendo...\n"; break;
-            default: cout << "Opcion invalida.\n"; system("pause");
+            case 1: 
+                IngresarConsulta(archivoBin); 
+                break;
+            case 2: 
+                MostrarConsultas(archivoBin); 
+                break;
+            case 3: 
+                EncontrarConsulta(archivoBin); 
+                break;
+            case 4: 
+                ModificarConsulta(archivoBin); 
+                break;
+            case 5: 
+                EliminarConsulta(archivoBin); 
+                break;
+            case 0: 
+                cout << "Saliendo...\n"; 
+                break;
+            default: 
+                cout << "Opcion invalida.\n"; 
+                system("pause");
         }
     } while(opcion != 0);
 }
