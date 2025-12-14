@@ -1,14 +1,8 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <fstream>
+#include <string>
 using namespace std;
-struct Tratamiento
-{
-    int idTratamiento;
-    int idDiagnostico;
-    char nombreVeterinario[100];
-    char tratamiento[300];
-    float monto;
-    bool eliminado;
-};
+
 void ReporteVeterinarios(string archivoTratamientos) {
     Tratamiento t;
     ifstream archivo(archivoTratamientos, ios::binary);

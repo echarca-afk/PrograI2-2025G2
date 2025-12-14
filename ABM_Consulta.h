@@ -2,7 +2,6 @@
 #include <fstream>
 #include <string>
 using namespace std;
-
 struct fecha {
     int dia;
     int mes;

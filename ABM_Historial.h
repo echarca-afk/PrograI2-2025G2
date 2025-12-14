@@ -3,11 +3,6 @@
 #include <string>
 using namespace std;
 
-struct fecha {
-    int dia;
-    int mes;
-    int anio;
-};
 struct HistorialClinico {
     int idHistorial;       // ID único del historial
     int idMascota;         // Relación con la mascota

@@ -1,22 +1,8 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <fstream>
+#include <string>
 using namespace std;
-struct fecha
-{
-    int dia;
-    int mes;
-    int anio;
-};
-struct Factura {
-    int nroFactura;            
-    int idTratamiento;         
-    char descripcion[200];      
-    float monto;                
-    int nit;                    
-    char beneficiario[100];     
-    fecha fechaFactura;       
-    char formaPago[30];        
-    bool eliminado;
-};
+
 void ReporteFacturacion(string archivoFacturas) {
     Factura f;
     ifstream archivo(archivoFacturas, ios::binary);

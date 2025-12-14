@@ -1,25 +1,8 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <fstream>
+#include <string>
 using namespace std;
-struct Duenio{
-    int idDuenio;  
-    char nombre[30];
-    char apellido[30];
-    char direccion[50];
-    char telefono[15];
-    char email[30];
-    bool eliminado;
-};
-struct Mascota{
-    int idMascota;    // ID único de la mascota
-    int idDuenio;
-    char nombre[30];
-    char especie[20]; 
-    char raza[30];
-    char sexo[10]; 
-    int edad;
-    bool eliminado;   
-};
-
+string ObtenerNombreDuenio(string archivoDuenios, int idDuenio);
 void ReporteMascotas(string archivoMascotas, string archivoDuenios) {
     Mascota m;
     ifstream archivo(archivoMascotas, ios::binary);

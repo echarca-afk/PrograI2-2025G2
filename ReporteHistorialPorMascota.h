@@ -1,21 +1,8 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <fstream>
+#include <string>
 using namespace std;
-struct fecha
-{
-    int dia;
-    int mes;
-    int anio;
-};
-struct HistorialClinico{
-    int idHistorial; 
-    int idMascota;  
-    int idConsulta;
-    fecha fechaHistorial;
-    char diagnostico[100];
-    char veterinario[30];
-    int idTratamiento;
-    bool eliminado;
-};
+
 void ReporteHistorialClinico(string archivoHistorial, int idMascota) {
     HistorialClinico h;
     ifstream archivo(archivoHistorial, ios::binary);

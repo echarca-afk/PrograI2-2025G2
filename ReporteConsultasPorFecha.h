@@ -1,38 +1,13 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <fstream>
+#include <string>
 using namespace std;
-struct fecha
-{
-    int dia;
-    int mes;
-    int anio;
-};
-struct consulta{
-    int idConsulta;
-    int idMascota;
-    fecha fecha_consulta;
-    char motivo[100];
-    bool eliminado;
-};
-struct Diagnostico
-{
-    int idDiagnostico;
-    int idMascota;
-    fecha fechaDiagnostico;
-    char diagnostico[300];
-    bool eliminado;
-};
-struct Tratamiento
-{
-    int idTratamiento;
-    int idDiagnostico;
-    char nombreVeterinario[100];
-    char tratamiento[300];
-    float monto;
-    bool eliminado;
-};
 
+string ObtenerDiagnostico(string archivoDiagnosticos, int idMascota);
+string ObtenerTratamiento(string archivoTratamientos, int idMascota);
+float ObtenerMontoTratamiento(string archivoTratamientos, int idMascota);
 void ReporteConsultasPorFecha(string archivoConsultas, string archivoDiagnosticos, string archivoTratamientos, fecha fechaFiltro) {
-    consulta c;
+    Consulta c;
     ifstream archivo(archivoConsultas, ios::binary);
     ofstream reporte("ReporteConsultas.txt");
     if (archivo.good()) {
@@ -40,7 +15,7 @@ void ReporteConsultasPorFecha(string archivoConsultas, string archivoDiagnostico
         reporte << "======================================" << endl;
         reporte << "ID Consulta\tID Mascota\tFecha\tMotivo\tDiagnostico\tTratamiento\tMonto" << endl;
         reporte << "------------------------------------------------------------------------" << endl;
-        while (archivo.read((char*)&c, sizeof(consulta))) {
+        while (archivo.read((char*)&c, sizeof(Consulta))) {
             if (!c.eliminado &&
                 c.fecha_consulta.dia == fechaFiltro.dia && c.fecha_consulta.mes == fechaFiltro.mes &&
                 c.fecha_consulta.anio == fechaFiltro.anio) {

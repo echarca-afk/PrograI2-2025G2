@@ -1,14 +1,8 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <fstream>
+#include <string>
 using namespace std;
-struct Duenio{
-    int idDuenio;  
-    char nombre[30];
-    char apellido[30];
-    char direccion[50];
-    char telefono[15];
-    char email[30];
-    bool eliminado;
-};
+
 void ReporteDuenios(string archivoDuenios) {
     Duenio d;
     ifstream archivo(archivoDuenios, ios::binary);

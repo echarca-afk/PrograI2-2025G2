@@ -22,11 +22,9 @@ void EncontrarDiagnostico(string archivoBin);
 void ModificarDiagnostico(string archivoBin);
 void EliminarDiagnostico(string archivoBin);
 
-
 void ABM_Diagnostico(string ArchivoDiagnosticos) {
     MenuDiagnosticos(ArchivoDiagnosticos);
 }
-
 void MenuDiagnosticos(string archivoBin) {
     int opcion;
     do {
