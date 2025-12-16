@@ -1,13 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+
 using namespace std;
 
-struct fecha {
-    int dia;
-    int mes;
-    int anio;
-};
 struct Factura {
     int nroFactura;             // ID único de la factura
     int idTratamiento;          // Relación con tratamiento

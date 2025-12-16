@@ -74,9 +74,9 @@ void IngresarDatosDuenio(string NombreArchivo)
     archivo.open(NombreArchivo, ios::binary | ios::app);
     if (archivo.good())
     {
-        cin.ignore();
         cout << "Ingrese su id 'Duenio': ";
         cin >> Datosduenio.idDuenio;
+        cin.ignore();
         cout << "Ingrese su nombre: ";
         cin.getline(Datosduenio.nombre, 30);
         cout << "Ingrese su apellido: ";

@@ -76,7 +76,6 @@ void AgregarMascota(string archivoNombre) {
     cout << "Ingrese ID del duenio: ";
     cin >> m.idDuenio;
     cin.ignore();
-
     cout << "Nombre: "; 
     cin.getline(m.nombre, 30);
     cout << "Especie: "; 
