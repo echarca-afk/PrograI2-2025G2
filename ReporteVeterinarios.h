@@ -3,10 +3,10 @@
 #include <string>
 using namespace std;
 
-void ReporteVeterinarios(string archivoTratamientos) {
+void ReporteVeterinarios(string archivoTratamientos, string archivoTxt) {
     Tratamiento t;
     ifstream archivo(archivoTratamientos, ios::binary);
-    ofstream reporte("ReporteVeterinarios.txt");
+    ofstream reporte(archivoTxt);
 
     if (archivo.good()) {
         reporte << "VETERINARIOS Y CONSULTAS ATENDIDAS" << endl;

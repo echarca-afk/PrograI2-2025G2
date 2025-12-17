@@ -6,27 +6,36 @@ using namespace std;
 string ObtenerDiagnostico(string archivoDiagnosticos, int idMascota);
 string ObtenerTratamiento(string archivoTratamientos, int idMascota);
 float ObtenerMontoTratamiento(string archivoTratamientos, int idMascota);
-void ReporteConsultasPorFecha(string archivoConsultas, string archivoDiagnosticos, string archivoTratamientos, fecha fechaFiltro) {
+void ReporteConsultasPorFecha(string archivoConsultas,string archivoDiagnosticos,string archivoTratamientos,string archivoTxt) {
     Consulta c;
     ifstream archivo(archivoConsultas, ios::binary);
-    ofstream reporte("ReporteConsultas.txt");
+    ofstream reporte(archivoTxt);
+    fecha fechaFiltro;
+    cout << "Ingrese la fecha (dd mm aaaa): ";
+    cin >> fechaFiltro.dia >> fechaFiltro.mes >> fechaFiltro.anio;
+
     if (archivo.good()) {
         reporte << "CONSULTAS, DIAGNOSTICOS Y TRATAMIENTOS" << endl;
         reporte << "======================================" << endl;
         reporte << "ID Consulta\tID Mascota\tFecha\tMotivo\tDiagnostico\tTratamiento\tMonto" << endl;
         reporte << "------------------------------------------------------------------------" << endl;
+
         while (archivo.read((char*)&c, sizeof(Consulta))) {
             if (!c.eliminado &&
-                c.fecha_consulta.dia == fechaFiltro.dia && c.fecha_consulta.mes == fechaFiltro.mes &&
+                c.fecha_consulta.dia == fechaFiltro.dia &&
+                c.fecha_consulta.mes == fechaFiltro.mes &&
                 c.fecha_consulta.anio == fechaFiltro.anio) {
+
                 string diag = ObtenerDiagnostico(archivoDiagnosticos, c.idMascota);
                 string trat = ObtenerTratamiento(archivoTratamientos, c.idMascota);
                 float monto = ObtenerMontoTratamiento(archivoTratamientos, c.idMascota);
+
                 reporte << c.idConsulta << "\t" << c.idMascota << "\t"
                         << c.fecha_consulta.dia << "/" << c.fecha_consulta.mes << "/" << c.fecha_consulta.anio
                         << "\t" << c.motivo << "\t" << diag << "\t" << trat << "\t" << monto << endl;
             }
         }
+
         reporte << "------------------------------------------------------------------------" << endl;
     }
     archivo.close();
@@ -52,8 +61,6 @@ string ObtenerTratamiento(string archivoTratamientos, int idMascota) {
     string textoTratamiento = "";
     if (archivo.good()) {
         while (archivo.read((char*)&t, sizeof(Tratamiento))) {
-            // Aquí la relación es indirecta: Tratamiento está ligado a Diagnóstico
-            // y Diagnóstico a Mascota. Puedes ajustar según tu diseño.
             if (!t.eliminado) {
                 textoTratamiento = t.tratamiento;
             }

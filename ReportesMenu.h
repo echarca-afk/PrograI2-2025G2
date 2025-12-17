@@ -8,20 +8,11 @@
 #include "ReporteFacturacion.h"
 #include "ReporteVeterinarios.h"
 using namespace std;
-void mostrarMenu(string archivoDuenios, string archivoMascotas, string archivoConsultas, string archivoHistorial, string archivoFacturacion, string archivoVeterinarios);
-void ReporteDuenios(string archivoDuenios, string archivoTxt);
-void ReporteMascotas(string archivoMascotas, string archivoTxt);
-void ReporteConsultasPorFecha(string archivoConsultas, string archivoTxt);
-void ReporteHistorialPorMascota(string archivoHistorial, string archivoTxt);
-void ReporteFacturacion(string archivoFacturacion, string archivoTxt);
-void ReporteVeterinarios(string archivoTratamientos, string archivoTxt);
-
-void MostrarReportes(string archivoDuenios, string archivoMascotas, string archivoConsultas, string archivoHistorial, string archivoFacturacion, string archivoVeterinarios){
-
-    mostrarMenu(archivoDuenios, archivoMascotas, archivoConsultas, archivoHistorial, archivoFacturacion, archivoVeterinarios);
+void mostrarMenu(string archivoDuenios, string archivoMascotas, string archivoConsultas, string archivoDiagnosticos, string archivoTratamientos,  string archivoHistorial, string archivoFacturacion, string archivoVeterinarios);
+void MostrarReportes(string archivoDuenios, string archivoMascotas, string archivoConsultas, string archivoDiagnosticos, string archivoTratamientos, string archivoHistorial, string archivoFacturacion, string archivoVeterinarios){
+    mostrarMenu(archivoDuenios, archivoMascotas, archivoConsultas, archivoDiagnosticos, archivoTratamientos,archivoHistorial, archivoFacturacion, archivoVeterinarios);
 }
-
-void mostrarMenu(string archivoDuenios, string archivoMascotas, string archivoConsultas, string archivoHistorial, string archivoFacturacion, string archivoVeterinarios) {
+void mostrarMenu(string archivoDuenios, string archivoMascotas, string archivoConsultas, string archivoDiagnosticos, string archivoTratamientos, string archivoHistorial, string archivoFacturacion, string archivoVeterinarios) {
     int opcion;
     string archivoTxt = "ReporteGeneral.txt";
 
@@ -46,13 +37,13 @@ void mostrarMenu(string archivoDuenios, string archivoMascotas, string archivoCo
                 ReporteDuenios(archivoDuenios, archivoTxt); 
                 break;
             case 2: 
-                ReporteMascotas(archivoMascotas, archivoTxt); 
+                ReporteMascotas(archivoMascotas, archivoDuenios,archivoTxt); 
                 break;
             case 3: 
-                ReporteConsultasPorFecha(archivoConsultas, archivoTxt); 
+                ReporteConsultasPorFecha(archivoConsultas,archivoDiagnosticos,archivoTratamientos, archivoTxt); 
                 break;
             case 4: 
-                ReporteHistorialPorMascota(archivoHistorial, archivoTxt); 
+                ReporteHistorialClinico(archivoHistorial, archivoTxt); 
                 break;
             case 5: 
                 ReporteFacturacion(archivoFacturacion, archivoTxt); 
@@ -60,7 +51,8 @@ void mostrarMenu(string archivoDuenios, string archivoMascotas, string archivoCo
             case 6: 
                 ReporteVeterinarios(archivoVeterinarios, archivoTxt); 
                 break;
-            case 0: cout << "Volviendo al menú principal...\n"; 
+            case 0: 
+                cout << "Volviendo al menú principal...\n"; 
                 break;
             default: 
                 cout << "Opción inválida.\n"; system("pause");

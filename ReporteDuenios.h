@@ -3,10 +3,10 @@
 #include <string>
 using namespace std;
 
-void ReporteDuenios(string archivoDuenios) {
+void ReporteDuenios(string archivoDuenios, string archivoTxt) {
     Duenio d;
     ifstream archivo(archivoDuenios, ios::binary);
-    ofstream reporte("ReporteDuenios.txt");
+    ofstream reporte(archivoTxt);
     if (archivo.good()) {
         reporte << "DUEÑOS REGISTRADOS" << endl;
         reporte << "==================" << endl;

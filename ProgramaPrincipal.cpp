@@ -11,7 +11,7 @@
 #include "ReportesMenu.h"
 using namespace std;
 
-void mostrarMenu(string ArchivoDuenios, string ArchivoMascotas, string ArchivoConsultas, string ArchivoDiagnosticos, string ArchivoTratamientos, string ArchivoHistorialClinico, string ArchivoFacturacion, string ArchivoVeterinarios);
+void mostrarMenuPrincipal(string ArchivoDuenios, string ArchivoMascotas, string ArchivoConsultas, string ArchivoDiagnosticos, string ArchivoTratamientos, string ArchivoHistorialClinico, string ArchivoFacturacion, string ArchivoVeterinarios);
 int main(){
     string ArchivoDuenios = "Duenios.bin";
     string ArchivoMascotas = "Mascotas.bin";
@@ -22,10 +22,10 @@ int main(){
     string ArchivoFacturacion = "Facturacion.bin";
     string ArchivoVeterinarios = "Veterinarios.bin";
     string ArchivoVeterinariaGoCanTXT = "ArchivoGenericoVeterinaria.txt";
-    mostrarMenu(ArchivoDuenios, ArchivoMascotas, ArchivoConsultas, ArchivoDiagnosticos, ArchivoTratamientos, ArchivoHistorialClinico, ArchivoFacturacion, ArchivoVeterinarios);
+    mostrarMenuPrincipal(ArchivoDuenios, ArchivoMascotas, ArchivoConsultas, ArchivoDiagnosticos, ArchivoTratamientos, ArchivoHistorialClinico, ArchivoFacturacion, ArchivoVeterinarios);
     return 0;
 }
-void mostrarMenu(string ArchivoDuenios, string ArchivoMascotas, string ArchivoConsultas, string ArchivoDiagnosticos, string ArchivoTratamientos, string ArchivoHistorialClinico, string ArchivoFacturacion, string ArchivoVeterinarios) {
+void mostrarMenuPrincipal(string ArchivoDuenios, string ArchivoMascotas, string ArchivoConsultas, string ArchivoDiagnosticos, string ArchivoTratamientos, string ArchivoHistorialClinico, string ArchivoFacturacion, string ArchivoVeterinarios) {
     int opcion=0;
     do {
         system("cls");
@@ -68,7 +68,7 @@ void mostrarMenu(string ArchivoDuenios, string ArchivoMascotas, string ArchivoCo
                 ABM_Factura(ArchivoFacturacion);
                 break;
             case 8:
-                MostrarReportes(ArchivoDuenios, ArchivoMascotas, ArchivoConsultas, ArchivoHistorialClinico, ArchivoFacturacion, ArchivoVeterinarios);
+                MostrarReportes(ArchivoDuenios, ArchivoMascotas, ArchivoConsultas, ArchivoDiagnosticos,ArchivoTratamientos,ArchivoHistorialClinico, ArchivoFacturacion, ArchivoVeterinarios);
                 break;
             default:
                 cout << "\nOpcion invalida. Intente nuevamente.\n";

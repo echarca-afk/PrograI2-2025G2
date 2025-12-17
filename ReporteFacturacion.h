@@ -3,10 +3,10 @@
 #include <string>
 using namespace std;
 
-void ReporteFacturacion(string archivoFacturas) {
+void ReporteFacturacion(string archivoFacturas, string archivoTxt) {
     Factura f;
     ifstream archivo(archivoFacturas, ios::binary);
-    ofstream reporte("ReporteFacturas.txt");
+    ofstream reporte(archivoTxt);
     if (archivo.good()) {
         reporte << "FACTURACION EMITIDA" << endl;
         reporte << "===================" << endl;
