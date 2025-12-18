@@ -2,7 +2,8 @@
 #include <fstream>
 #include <string>
 using namespace std;
-struct Duenio {
+struct Duenio 
+{
     int idDuenio;      // ID único del dueño
     char nombre[30];
     char apellido[30];
@@ -30,11 +31,11 @@ void MenuOpciones(string nombreArchivo)
         system("cls");
         cout << "MENU DE OPCIONES" << endl;
         cout << "================" << endl;
-        cout << "\t1. Crear nueva informacion de Duenio" << endl;
-        cout << "\t2. Listar Informaciones de Duenios" << endl;
-        cout << "\t3. Encontrar informacion de Duenio" << endl;
-        cout << "\t4. Modificar informacion de Duenio" << endl;
-        cout << "\t5. Eliminar informacion de Duenio" << endl;
+        cout << "\t1. Crear nueva informacion de Dueño" << endl;
+        cout << "\t2. Listar Informaciones de Dueños" << endl;
+        cout << "\t3. Encontrar informacion de Dueño" << endl;
+        cout << "\t4. Modificar informacion de Dueño" << endl;
+        cout << "\t5. Eliminar informacion de Dueño" << endl;
         cout << "\t0. Salir" << endl;
         cout << "Seleccione una opcion: ";
         cin >> opcion;
@@ -74,7 +75,7 @@ void IngresarDatosDuenio(string NombreArchivo)
     archivo.open(NombreArchivo, ios::binary | ios::app);
     if (archivo.good())
     {
-        cout << "Ingrese su id 'Duenio': ";
+        cout << "Ingrese su id 'Dueño': ";
         cin >> Datosduenio.idDuenio;
         cin.ignore();
         cout << "Ingrese su nombre: ";
@@ -268,3 +269,4 @@ void EliminarInfDuenio(string NombreArchivo)
     system("pause");
     archivo.close();
 }
+
