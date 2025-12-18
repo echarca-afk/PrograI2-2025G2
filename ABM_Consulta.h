@@ -77,7 +77,7 @@ void IngresarConsulta(string archivoBin) {
     cout << "Ingrese fecha de la consulta:\n";
     cout << "Dia: "; cin >> c.fecha_consulta.dia;
     cout << "Mes: "; cin >> c.fecha_consulta.mes;
-    cout << "Anio: "; cin >> c.fecha_consulta.anio;
+    cout << "Año: "; cin >> c.fecha_consulta.anio;
     cin.ignore();
     cout << "Ingrese motivo: ";
     cin.getline(c.motivo, 100);
@@ -156,7 +156,7 @@ void ModificarConsulta(string archivoBin) {
             cout << "Nueva fecha:\n";
             cout << "Dia: "; cin >> c.fecha_consulta.dia;
             cout << "Mes: "; cin >> c.fecha_consulta.mes;
-            cout << "Anio: "; cin >> c.fecha_consulta.anio;
+            cout << "Año: "; cin >> c.fecha_consulta.anio;
             cin.ignore();
             cout << "Nuevo motivo: ";
             cin.getline(c.motivo, 100);
@@ -194,4 +194,5 @@ void EliminarConsulta(string archivoBin) {
     if (!encontrado) cout << "Consulta no encontrada.\n";
     archivo.close();
     system("pause");
+
 }
