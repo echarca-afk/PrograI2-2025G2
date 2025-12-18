@@ -9,7 +9,8 @@
 #include "ReporteVeterinarios.h"
 using namespace std;
 void mostrarMenu(string archivoDuenios, string archivoMascotas, string archivoConsultas, string archivoDiagnosticos, string archivoTratamientos,  string archivoHistorial, string archivoFacturacion, string archivoVeterinarios);
-void MostrarReportes(string archivoDuenios, string archivoMascotas, string archivoConsultas, string archivoDiagnosticos, string archivoTratamientos, string archivoHistorial, string archivoFacturacion, string archivoVeterinarios){
+void MostrarReportes(string archivoDuenios, string archivoMascotas, string archivoConsultas, string archivoDiagnosticos, string archivoTratamientos, string archivoHistorial, string archivoFacturacion, string archivoVeterinarios)
+{
     mostrarMenu(archivoDuenios, archivoMascotas, archivoConsultas, archivoDiagnosticos, archivoTratamientos,archivoHistorial, archivoFacturacion, archivoVeterinarios);
 }
 void mostrarMenu(string archivoDuenios, string archivoMascotas, string archivoConsultas, string archivoDiagnosticos, string archivoTratamientos, string archivoHistorial, string archivoFacturacion, string archivoVeterinarios) {
@@ -27,7 +28,7 @@ void mostrarMenu(string archivoDuenios, string archivoMascotas, string archivoCo
         cout << "3. Reporte de Consultas Diagnóstico/Tratamiento por Fecha\n";
         cout << "4. Reporte de Historial Clínico por Mascota\n";
         cout << "5. Reporte de Facturación Emitida\n";
-        cout << "6. Reporte de Veterinarios y consultas atendidas\n";
+        cout << "6. Reporte de Veterinarios y Consultas Atendidas\n";
         cout << "0. Volver al menú principal\n";
         cout << "-------------------------------------\n";
         cout << "Seleccione una opción: ";
@@ -51,7 +52,7 @@ void mostrarMenu(string archivoDuenios, string archivoMascotas, string archivoCo
                 ReporteFacturacion(archivoFacturacion, archivoTxt); 
                 break;
             case 6: 
-                ReporteVeterinarios(archivoVeterinarios, archivoTxt); 
+                ReporteVeterinarios(archivoTratamientos, archivoTxt); 
                 break;
             case 0: 
                 cout << "Volviendo al menú principal...\n"; 
@@ -62,3 +63,4 @@ void mostrarMenu(string archivoDuenios, string archivoMascotas, string archivoCo
     } while(opcion != 0);
 
 }
+
