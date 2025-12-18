@@ -12,7 +12,8 @@
 using namespace std;
 
 void mostrarMenuPrincipal(string ArchivoDuenios, string ArchivoMascotas, string ArchivoConsultas, string ArchivoDiagnosticos, string ArchivoTratamientos, string ArchivoHistorialClinico, string ArchivoFacturacion, string ArchivoVeterinarios);
-int main(){
+int main()
+{
     string ArchivoDuenios = "Duenios.bin";
     string ArchivoMascotas = "Mascotas.bin";
     string ArchivoConsultas = "Consultas.bin";
@@ -27,7 +28,9 @@ int main(){
 }
 void mostrarMenuPrincipal(string ArchivoDuenios, string ArchivoMascotas, string ArchivoConsultas, string ArchivoDiagnosticos, string ArchivoTratamientos, string ArchivoHistorialClinico, string ArchivoFacturacion, string ArchivoVeterinarios) {
     int opcion=0;
-    do {
+    do 
+    {
+        system("chcp 65001");
         system("cls");
         cout << "\n=====================================\n";
         cout << "   SISTEMA VETERINARIA GO CAN\n";
@@ -95,3 +98,4 @@ RegistroVeterinaria = une mascota + historial en un solo registro*/
         cout << "0. Volver al menú principal\n";
         cout << "-------------------------------------\n";
         cout << "Seleccione una opción: ";*/
+
