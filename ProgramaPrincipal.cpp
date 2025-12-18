@@ -35,7 +35,7 @@ void mostrarMenuPrincipal(string ArchivoDuenios, string ArchivoMascotas, string 
         cout << "\n=====================================\n";
         cout << "   SISTEMA VETERINARIA GO CAN\n";
         cout << "=====================================\n";
-        cout << "1. ABM Duenio\n";
+        cout << "1. ABM Dueño\n";
         cout << "2. ABM Mascota\n";
         cout << "3. ABM Consulta\n";
         cout << "4. ABM Diagnostico\n";
@@ -48,7 +48,8 @@ void mostrarMenuPrincipal(string ArchivoDuenios, string ArchivoMascotas, string 
         cout << "Seleccione una opcion: ";
         cin >> opcion;
 
-        switch(opcion) {
+        switch(opcion) 
+        {
             case 1:
                 ABM_Duenio(ArchivoDuenios);
                 break;
@@ -98,4 +99,5 @@ RegistroVeterinaria = une mascota + historial en un solo registro*/
         cout << "0. Volver al menú principal\n";
         cout << "-------------------------------------\n";
         cout << "Seleccione una opción: ";*/
+
 
