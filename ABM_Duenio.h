@@ -31,12 +31,12 @@ void MenuOpciones(string nombreArchivo)
         system("cls");
         cout << "MENU DE OPCIONES" << endl;
         cout << "================" << endl;
-        cout << "\t1. Crear nueva informacion de Dueño" << endl;
-        cout << "\t2. Listar Informaciones de Dueños" << endl;
-        cout << "\t3. Encontrar informacion de Dueño" << endl;
-        cout << "\t4. Modificar informacion de Dueño" << endl;
-        cout << "\t5. Eliminar informacion de Dueño" << endl;
-        cout << "\t0. Salir" << endl;
+        cout << "1. Crear nueva informacion de Dueño" << endl;
+        cout << "2. Listar Informaciones de Dueños" << endl;
+        cout << "3. Encontrar informacion de Dueño" << endl;
+        cout << "4. Modificar informacion de Dueño" << endl;
+        cout << "5. Eliminar informacion de Dueño" << endl;
+        cout << "0. Salir" << endl;
         cout << "Seleccione una opcion: ";
         cin >> opcion;
         switch (opcion)
@@ -269,4 +269,5 @@ void EliminarInfDuenio(string NombreArchivo)
     system("pause");
     archivo.close();
 }
+
 
