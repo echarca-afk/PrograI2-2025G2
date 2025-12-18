@@ -73,12 +73,12 @@ void IngresarFactura(string archivoBin) {
         cout << "No se pudo abrir el archivo.\n";
         return;
     }
-    cout << "Ingrese número de factura: ";
+    cout << "Ingrese numero de factura: ";
     cin >> f.nroFactura;
     cout << "Ingrese ID del tratamiento: ";
     cin >> f.idTratamiento;
     cin.ignore();
-    cout << "Descripción: ";
+    cout << "Descripcion: ";
     cin.getline(f.descripcion, 200);
     cout << "Monto: ";
     cin >> f.monto;
@@ -134,7 +134,7 @@ void BuscarFactura(string archivoBin) {
     ifstream archivo(archivoBin, ios::binary);
     int idBuscado;
     bool encontrado = false;
-    cout << "Ingrese número de factura a buscar: ";
+    cout << "Ingrese numero de factura a buscar: ";
     cin >> idBuscado;
     if (!archivo.good()) {
         cout << "No se pudo abrir el archivo.\n";
@@ -225,4 +225,5 @@ void EliminarFactura(string archivoBin) {
     if (!encontrado) cout << "Factura no encontrada.\n";
     archivo.close();
     system("pause");
+
 }
